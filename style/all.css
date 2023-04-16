@@ -11,6 +11,20 @@ label {
     color: white;
 }
 
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+
 .progress {
     width: 100%;
     margin: 0 auto;
@@ -26,7 +40,8 @@ progress::-webkit-progress-value {
 }
 
 .audio {
-    height: 500px;
+    height: 100vh;
+    align-items: center;
 }
 
 .audio>img {
@@ -177,10 +192,6 @@ progress::-webkit-progress-value {
 
 
 
-body {
-    margin-top: 80px;
-    background-color: black;
-}
 
 .nowTime {
     color: white;

@@ -8,8 +8,8 @@ const musicData = [
         Album: "吾十有五而志於學",
         MusicType: "搖滾",
         MusicTime: "5:55",
-        MusicImage: "../img/我還年輕我還年輕.jpeg",
-        MusicMp3: "../Music/老王樂團-我還年輕 我還年輕.mp3"
+        MusicImage: "./img/我還年輕我還年輕.jpeg",
+        MusicMp3: "./Music/老王樂團-我還年輕 我還年輕.mp3"
     },
     {
         MusicID: 2,
@@ -19,8 +19,8 @@ const musicData = [
         Album: "青春只差兩撇",
         MusicType: "情歌",
         MusicTime: "4:43",
-        MusicImage: "../img/怕胖團-魚.jpeg",
-        MusicMp3: "../Music/怕胖樂團-魚.mp3"
+        MusicImage: "./img/怕胖團-魚.jpeg",
+        MusicMp3: "./Music/怕胖樂團-魚.mp3"
     },
     {
         MusicID: 3,
@@ -30,8 +30,8 @@ const musicData = [
         Album: "麋先生MIXER【嗜愛動物Loveholic】2020",
         MusicType: "抒情",
         MusicTime: "5:03",
-        MusicImage: "../img/麋先生-稀有品種.jpeg",
-        MusicMp3: "../Music/稀有品種.mp3"
+        MusicImage: "./img/麋先生-稀有品種.jpeg",
+        MusicMp3: "./Music/稀有品種.mp3"
     },
     {
         MusicID: 4,
@@ -41,8 +41,8 @@ const musicData = [
         Album: "青春只差兩撇",
         MusicType: "抒情",
         MusicTime: "5:08",
-        MusicImage: "../img/怕胖樂團-鴦.jpeg",
-        MusicMp3: "../Music/怕胖團PAPUN BAND 《 鴦 The Left Alone Lovebird》Official Music Video.mp3"
+        MusicImage: "./img/怕胖樂團-鴦.jpeg",
+        MusicMp3: "./Music/怕胖團PAPUN BAND 《 鴦 The Left Alone Lovebird》Official Music Video.mp3"
     },
     {
         MusicID: 5,
@@ -52,8 +52,8 @@ const musicData = [
         Album: "青春只差兩撇",
         MusicType: "抒情",
         MusicTime: "4:33",
-        MusicImage: "../img/怕胖樂團-月旁月光.jpeg",
-        MusicMp3: "../Music/怕胖團PAPUN BAND《 月旁月光 》 MUSIC VIDEO.mp3"
+        MusicImage: "./img/怕胖樂團-月旁月光.jpeg",
+        MusicMp3: "./Music/怕胖團PAPUN BAND《 月旁月光 》 MUSIC VIDEO.mp3"
     },
     {
         MusicID: 6,
@@ -63,11 +63,11 @@ const musicData = [
         Album: "青春只差兩撇",
         MusicType: "情歌",
         MusicTime: "4:18",
-        MusicImage: "../img/怕胖樂團-我沒有用，沒辦法給你想要的生活.jpeg",
-        MusicMp3: "../Music/怕胖團PAPUN BAND《 我沒有用，沒辦法給你想要的生活 》Official Music Video.mp3"
+
+        MusicImage: "./img/怕胖樂團-我沒有用，沒辦法給你想要的生活.jpeg",
+        MusicMp3: "./Music/怕胖團PAPUN BAND《 我沒有用，沒辦法給你想要的生活 》Official Music Video.mp3"
     }
 ]
-
 
 
 
@@ -90,7 +90,7 @@ window.onload = function () {
     controlInfo()
     initMusic()
     myVideo.play();
-    document.getElementById('play').src = '../icon/pause-solid 1.png';
+    document.getElementById('play').src = './icon/pause-solid 1.png';
     //播放結束
     myVideo.onended = function () {
         MusicIndex += 1
@@ -98,7 +98,7 @@ window.onload = function () {
         controlInfo()
         myVideo.play();
         initMusic()
-        document.getElementById('play').src = '../icon/pause-solid 1.png'
+        document.getElementById('play').src = './icon/pause-solid 1.png'
     };
 
 
@@ -125,7 +125,7 @@ window.onload = function () {
         controlInfo()
         myVideo.play();
         initMusic()
-        document.getElementById('play').src = '../icon/pause-solid 1.png';
+        document.getElementById('play').src = './icon/pause-solid 1.png';
         myVideo.onended = function () {
             next()
         };
@@ -181,11 +181,11 @@ window.onload = function () {
 
         if (myVideo.paused == true) { //當前為暫停播放 點擊時 播放
             myVideo.play();
-            document.getElementById('play').src = '../icon/pause-solid 1.png'
+            document.getElementById('play').src = './icon/pause-solid 1.png'
             document.querySelector('.rotate').style = 'animation: rotation 10s infinite linear;'
         } else {
             myVideo.pause();
-            document.getElementById('play').src = '../icon/Vector.png'
+            document.getElementById('play').src = './icon/Vector.png'
             document.querySelector('.rotate').style = 'animation-play-state: paused; '
 
         }
@@ -195,10 +195,10 @@ window.onload = function () {
     volume.onclick = function () {
         if (myVideo.muted == false) {
             myVideo.muted = true;
-            document.getElementById('volume').src = '../icon/volume-xmark-solid.png'
+            document.getElementById('volume').src = './icon/volume-xmark-solid.png'
         } else {
             myVideo.muted = false;
-            document.getElementById('volume').src = '../icon/volume-low-solid.png'
+            document.getElementById('volume').src = './icon/volume-low-solid.png'
         }
     }
 
@@ -218,7 +218,7 @@ window.onload = function () {
         controlInfo()
         myVideo.play();
         initMusic()
-        document.getElementById('play').src = '../icon/pause-solid 1.png'
+        document.getElementById('play').src = './icon/pause-solid 1.png'
 
     }
     //上一首function
@@ -232,12 +232,14 @@ window.onload = function () {
         controlInfo()
         myVideo.play();
         initMusic()
-        document.getElementById('play').src = '../icon/pause-solid 1.png';
+        document.getElementById('play').src = './icon/pause-solid 1.png';
     }
 
 
     //control圖片
     function controlInfo() {
+        console.log(musicData[MusicIndex].MusicImage)
+
         controlData.innerHTML = `
                 <img src="${musicData[MusicIndex].MusicImage}" alt="" />
                 <div class="control-text">
